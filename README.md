@@ -22,3 +22,40 @@ return jsonify (my_influencers)
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+
+
+
+
+
+
+
+
+
+templates/profile.html
+
+<html>
+
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() [
+$("#getdata").click(function() [
+
+$.getjson('/data', function(data) {
+console.log("ajax received data!");
+console.dir(dat);
+});
+});
+
+});
+</script>
+
+</head>
+
+<body>
+{% if name %}
+<h1 style = "color: red;">hello, {{ name }} ! </h1>
+</body>
